@@ -99,8 +99,34 @@ const user = {
   age: 18,
 };
 user.name; // 点操作
+//点操作的变量为有效的标识符（不包含空格，不以数字，不包含特殊字符）
 user["name"]; // 方括号访问
+//方括号可操作任何变量、可访问计算属性
 ```
 
 - [ ] 使用 `in` 操作符判断对象是否有字段(写出代码示例即可)
+
+  ```js
+  let person = {name, age: 20};
+  alert("age" in person);//true, person.age存在
+  alert("sex" in person);//false， person.sex不存在
+  ```
+
+  
+
 - [ ] 如何使用`for`循环遍历对象(写出代码示例即可)
+
+  ```js
+  let person = {
+      name: "cxr",
+      age: "20",
+      sex: "女"
+  }；
+  for (let key in person){
+      alert(key);//name,age,sex
+      alert(person[key]);//cxr,20,女
+  }
+  ```
+
+  
+
