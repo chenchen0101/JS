@@ -84,7 +84,7 @@ typeof alert; //"function"
 
 ## 对象基础
 
-- [ ] 对象点操作和方括号访问有什么区别(理解)
+- [x] 对象点操作和方括号访问有什么区别(理解)
 
 ```js
 const user = {
@@ -92,12 +92,32 @@ const user = {
   age: 18,
 };
 user.name; // 点操作
+//点操作的变量为有效的标识符（不包含空格，不以数字，不包含特殊字符）
 user["name"]; // 方括号访问
+//方括号可操作任何变量、可访问计算属性
 ```
 
-- [ ] 使用 `in` 操作符判断对象是否有字段(写出代码示例即可)
+- [x] 使用 `in` 操作符判断对象是否有字段(写出代码示例即可)
 
-- [ ] 如何使用`for`循环遍历对象(写出代码示例即可)
+```js
+let person = { name, age: 20 };
+alert("age" in person); //true, person.age存在
+alert("sex" in person); //false， person.sex不存在
+```
+
+- [x] 如何使用`for`循环遍历对象(写出代码示例即可)
+
+  ```js
+  let person = {
+      name: "cxr",
+      age: "20",
+      sex: "女"
+  }；
+  for (let key in person){
+      alert(key);//name,age,sex
+      alert(person[key]);//cxr,20,女
+  }
+  ```
 
 - [ ] 理解这一句话,**"赋值了对象的变量存储的不是对象本身，而是该对象“在内存中的地址”，换句话说就是对该对象的“引用”"**。
 
@@ -106,13 +126,13 @@ user["name"]; // 方括号访问
 >
 > ```js
 > const uesr = {
->   name: 'xxx',
+>   name: "xxx",
 >   age: 17,
-> }
+> };
 > function fn(obj) {
->     const newObj = Object.assign(obj)
-> 	newObj.name = 'hello world';
->     console.log(obj);
+>   const newObj = Object.assign(obj);
+>   newObj.name = "hello world";
+>   console.log(obj);
 > }
 > // 我希望在函数内部不对 user 对象做修改，这时候我们就需要克隆对象.
 > fn(user);
@@ -132,6 +152,3 @@ user["name"]; // 方括号访问
 const obj = undefined;
 console.log(obj.user.name);
 ```
-
-
-
