@@ -126,3 +126,19 @@ user["name"]; // 方括号访问
 > ```
 
 - [ ] 对象的克隆分为浅层克隆和深层克隆,这里我们像学会使用 `Object.assign` API 浅层克隆对象(写出示例代码即可)。
+
+**[垃圾回收 (javascript.info)](https://zh.javascript.info/garbage-collection) **
+
+**[对象方法，"this" (javascript.info)](https://zh.javascript.info/object-methods)**
+
+- [ ] 构造函数 new 的执行步骤(列出)
+- [ ] 如何使用可选链 "?."处理“不存在属性”的问题
+
+```js
+// 修改代码保证运行正确
+const obj = undefined;
+console.log(obj.user.name);
+```
+
+
+
