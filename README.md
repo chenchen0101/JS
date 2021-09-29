@@ -1,6 +1,6 @@
 ## ,JS 基础知识
 
-- [ ] 在 HTML 中，script 标签有几种使用脚本的方式？
+- [x] 在 HTML 中，script 标签有几种使用脚本的方式？
 
 ```html
 <!-- 1. 在 html 内部直接使用 script 脚本 -->
@@ -14,13 +14,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
-- [ ] JS 数据类型有哪些。typeof 运算符是如何使用的。
+- [x] JS 数据类型有哪些。typeof 运算符是如何使用的。
 
 ```markdown
 - 8 种数据类型，共分为两类
 
 1. 基本数据类型：undefined、Boolean、String、BigInt、Symbol、Number、null
-2. 复杂数据类型:Object
+2. 复杂数据类型: Object
 ```
 
 ```js
@@ -37,14 +37,14 @@ typeof null; //"object"
 typeof alert; //"function"
 ```
 
-- [ ] JS 中如何进行类型的强制转化
+- [x] JS 中如何进行类型的强制转化
 
 ```markdown
 - 字符串类型转换 String(value)
 - 数字类型转换 Number(value)
 ```
 
-- [ ] ==（非严格比较） 和 ===(严格比较)的本质区别是什么？
+- [x] ==（非严格比较） 和 ===(严格比较)的本质区别是什么？
 
 ```markdown
 - 非严格比较(==):比较时先转换数据类型再比较
@@ -52,8 +52,6 @@ typeof alert; //"function"
 ```
 
 ## JS 函数基础
-
-##
 
 - [ ] 什么是函数表达式？ 什么是函数声明？
 
@@ -75,12 +73,7 @@ typeof alert; //"function"
 
 - [x] 它们之间的区别是什么？
 
-  ```
-  语法区别：
-
-  ```
-
-- [ ] 箭头函数基础
+- [x] 箭头函数基础
 
 了解这段话，并学会使用箭头函数表达式语法。
 
