@@ -1,0 +1,15 @@
+{
+  "name": "JS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chenchen0101/JS.git",
+  "author": "GiveMe-A-Name <a455300764b@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.26"
+  }
+}
