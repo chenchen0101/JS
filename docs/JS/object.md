@@ -60,16 +60,35 @@ alert('sex' in person); //false， person.sex不存在
 
 对象的克隆分为浅层克隆和深层克隆,这里我们像学会使用 `Object.assign` API 浅层克隆对象(写出示例代码即可)。
 
+```js
+//Object.assign浅拷贝
+let user = {
+  name: 'xxx',
+  age: 17,
+};
+let user1 = { sex: 女 };
+let user2 = { sex: 男 };
+//将user1和user2中所有的属性都拷贝到user中
+Object.assign(user, user1, user2);
+//先user = { name: 'xxx', age: 17, sex: '男' }
+```
+
 5. **[垃圾回收 (javascript.info)](https://zh.javascript.info/garbage-collection)**
 
 6. **[对象方法，"this" (javascript.info)](https://zh.javascript.info/object-methods)**
 
 7. 构造函数 new 的执行步骤(列出)
 
+1、创建空对象并分配 this
+
+2、为 this 添加属性
+
+3、返回 this 的值
+
 8. 如何使用可选链 "?."处理“不存在属性”的问题
 
 ```js
 // 修改代码保证运行正确
 const obj = undefined;
-console.log(obj.user.name);
+console.log(obj?.user.name);
 ```
