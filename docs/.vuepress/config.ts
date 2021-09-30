@@ -16,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions>({
           { link: '/JS/basics.md', text: 'JS 基础知识' },
           { link: '/JS/function.md', text: 'function' },
           { link: '/JS/object.md', text: 'object' },
+          { link: '/JS/dataTypes.md', text: '数据类型' },
         ],
       },
     ],
