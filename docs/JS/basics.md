@@ -1,5 +1,6 @@
 ---
 title: JS 基础知识
+order: 1
 ---
 
 # JS 基础知识

@@ -1,5 +1,6 @@
 ---
 title: JS 函数基础
+order: 2
 ---
 
 # JS 函数基础
