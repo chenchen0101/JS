@@ -5,7 +5,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-CN',
   title: 'Hello JS From chenchen',
   description: '这里是陈陈的JS',
-  base: '/JS',
+  base: '/JS/',
   themeConfig: {
     logo: 'https://vuejs.org/images/logo.png',
     sidebar: [
