@@ -10,13 +10,13 @@ export default defineUserConfig<DefaultThemeOptions>({
     logo: 'https://vuejs.org/images/logo.png',
     sidebar: [
       {
-        text: 'JS',
-        link: '/JS',
+        text: 'JS Basic',
+        link: '/JSBasic',
         children: [
-          { link: '/JS/basics.md', text: 'JS 基础知识' },
-          { link: '/JS/function.md', text: 'function' },
-          { link: '/JS/object.md', text: 'object' },
-          { link: '/JS/dataTypes.md', text: '数据类型' },
+          { link: '/JSBasic/basics.md', text: 'JS 基础知识' },
+          { link: '/JSBasic/function.md', text: 'function' },
+          { link: '/JSBasic/object.md', text: 'object' },
+          { link: '/JSBasic/dataTypes.md', text: '数据类型' },
         ],
       },
     ],
