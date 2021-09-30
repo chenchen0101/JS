@@ -79,11 +79,13 @@ Object.assign(user, user1, user2);
 
 7. 构造函数 new 的执行步骤(列出)
 
-1、创建空对象并分配 this
+```markdown
+1. 创建空对象并分配 this
 
-2、为 this 添加属性
+2. 为 this 添加属性
 
-3、返回 this 的值
+3. 返回 this 的值
+```
 
 8. 如何使用可选链 "?."处理“不存在属性”的问题
 
