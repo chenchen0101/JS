@@ -155,19 +155,24 @@ alert( arr.length ); // length 2
 ```js
 // 1. 如何使用 splice 方法删除数组元素
 let arr = ["I", "go", "home"];
-...
-console.log(arr) // ["I"],
+arr.splice(1,2);
+console.log(arr);// ["I"],
 
 // 2. 如何使用 slice 方法对数组进行切片
 
 let arr = ["t", "e", "s", "t"];
-
+arr1 = arr.slice(0,3);
+arr2 = arr.slice(-3);
 console.log(arr1) // t,e,s
 console.log(arr2) // e,s,t
 
 // 4. 如何在数组中搜索元素
 // indexOf / lastIndexOf / includes / find / findIndex 都是如何使用的。
-
+let arr = [1, 0, false];
+alert( arr.indexOf(0) ); // 1
+alert( arr.indexOf(false) ); // 2
+alert( arr.indexOf(null) ); // -1
+alert( arr.includes(1) ); // true
 // 5. 如何使用 filter 方法对数组进行筛选
 
 // 6. 如何使用 map 方法对数组进行处理
