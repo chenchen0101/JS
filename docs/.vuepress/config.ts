@@ -19,6 +19,11 @@ export default defineUserConfig<DefaultThemeOptions>({
           { link: '/JSBasic/dataTypes.md', text: '数据类型' },
         ],
       },
+      {
+        text: 'Q & A',
+        link: '/QA',
+        children: [{ link: '/QA/dataTypes.md', text: '数据类型基础' }],
+      },
     ],
   },
 });
