@@ -41,7 +41,7 @@ order: 4
 
 4. 学会如何查找子字符串，如何获取子字符串方法(用代码表示即可)
 
-   （uyjh1）查找子字符串方法
+   （1）查找子字符串方法
 
    ```js
    //1、str.indexOf(substr,pos)
@@ -113,6 +113,9 @@ let fruits = ['Apple', 'Orange', 'Plum'];
 for (let fruit of fruits) {
   alert(fruit);
 }
+for(let i = 0; i < fruits.length; i++) {
+	console.log(fruits[i]);
+}
 ```
 
 ```js
@@ -163,7 +166,10 @@ alert( arr.includes(1) ); // true
 
 8. 如何使用 Map / Set 存取数据， 如何遍历 Map / Set (用代码表示即可)
 9. 如何使用 Object.keys, Object.values, Object.entries 对对象元素进行遍历(用代码表示即可)
-10. 学会如何进行数组解构，如何进行对象解构，如何进行嵌套解构.()
+
+
+
+8. 学会如何进行数组解构，如何进行对象解构，如何进行嵌套解构.()
 
 ```js
 let options = {
@@ -187,16 +193,26 @@ let {
 } = options;
 
 console.log(title);
+//'Object'
 console.log(width);
+120
 console.log(height);
+110
 console.log(item1);
+'Cake12'
 console.log(item2);
+'Donut34'
 ```
 
 11. 学会如何创建日期对象，根据日期对象获得年、月、日、具体日期、小时、分钟、秒针。(用代码表示即可)
-12. 了解时间戳的概念，学会 JS 如何获得当前时间戳(查资料)
-13. 了解序列化与反序列的概念(查资料)
-14. 学会如何使用 JS JSON 方法对数据进行序列化，反序列化。(用代码表示即可)
+
+let date= new Date();
+
+
+
+11. 了解时间戳的概念，学会 JS 如何获得当前时间戳(查资料)
+12. 了解序列化与反序列的概念(查资料)
+13. 学会如何使用 JS JSON 方法对数据进行序列化，反序列化。(用代码表示即可)
 
 ```js
 // JSON.stringify 的三个参数代表什么？
