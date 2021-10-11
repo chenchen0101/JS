@@ -23,7 +23,10 @@ export default defineUserConfig<DefaultThemeOptions>({
       {
         text: 'Q & A',
         link: '/QA',
-        children: [{ link: '/QA/dataTypes.md', text: '数据类型基础' }],
+        children: [
+          { link: '/QA/dataTypes.md', text: '数据类型基础' },
+          { link: '/QA/20211011.md', text: '2021/10/11' },
+        ],
       },
     ],
   },
