@@ -6,10 +6,6 @@
   "author": "GiveMe-A-Name <a455300764b@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
-  },
-  "devDependencies": {
-    "vuepress": "^2.0.0-beta.26"
+    "start": "node ./src/index.js"
   }
 }
