@@ -109,6 +109,8 @@ let user = {
     console.log(`Hello, ${this.firstName}!`);
   }
 };
+let fn = user.sayHi;
+let newFn = fn.bind(user);
 setTimeout(user.sayHi.bind(user), 1000); // Hello, John!
 // 这里我们进行了强制绑定，所以传入的函数this始终指向user
 ```
@@ -117,9 +119,24 @@ setTimeout(user.sayHi.bind(user), 1000); // Hello, John!
 
 ```js
 // 1. 自己写个例子，体会apply,call使用和传参区别
+let obj1 = {
+    id:123
+}
+let obj2 = {
+    id:456
+}
+let getId = function(a,b){
+    console.log(`a:${a},b:${b},${this.name}`)
+}
+getId.apply(obj1,["a","b"])
+getId.call(obj2,"a","b")
+let id1 = getId.bind(obj1);
+let id2 = getId.bind(obj2);
+id1(1, 2)
 
 // 2. 写个例子，体会bind 和 apply,call区别
 
 // 3. 利用bind，解决定时器的this丢失问题
+
 ```
 
