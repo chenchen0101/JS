@@ -137,6 +137,12 @@ id1(1, 2)
 // 2. 写个例子，体会bind 和 apply,call区别
 
 // 3. 利用bind，解决定时器的this丢失问题
-
+let obj = {
+    name:"c"
+    say(){
+        console.log(this.name)
+    }
+}
+setTimeout(user.say.bind(user),0)
 ```
 
