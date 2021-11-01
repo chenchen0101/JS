@@ -145,3 +145,30 @@ Point.prototype.printf = function () {
 };
 ```
 
+## 理解实例属性和实例方法
+
+```js
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  // 实例方法定义方式
+  printf() {
+    console.log(`point: ${this.x}, ${this.y}`);
+  }
+  // 实例属性定义方式
+  print = function () {
+    console.log(`point: ${this.x}, ${this.y}`);
+  };
+  // 这里 printf 和 print 有什么区别？
+  // 虽然他们都是函数，但区别还是比较大的
+}
+const p = new Point(1, 2);
+console.log(p); // Point { print: [Function: print], x: 1, y: 2 }
+// 对象 p 是属性有 print, x, y，这三个属性的，却没有printf
+// 这里因为 printf 被当作实例方法，是被放在 Point.prototype 中的
+// 而 print 是被当作实例属性，是直接被放在对象内部的，即类似于 this.print = function() {}
+
+```
+
