@@ -175,3 +175,105 @@ console.log(p); // Point { print: [Function: print], x: 1, y: 2 }
 
 ```
 
+## 类中的Getters/setters
+
+在“类”的内部可以使用`get`和`set`关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为。
+
+这是一个使用 `get/set` 实现 `user.name` 的示例：
+
+```JS
+class User {
+
+  constructor(name) {
+    // 调用 setter
+    this.name = name;
+  }
+
+  // 类似对象的 get 语法
+  get name() {
+    return this._name;
+  }
+
+  // 类似对象中给的 set 语法
+  set name(value) {
+    if (value.length < 4) {
+      console.log("Name is too short.");
+      return;
+    }
+    this._name = value;
+  }
+
+}
+
+let user = new User("John");
+console.log(user.name); // John
+
+// 这样相等于 User.prototype 中创建 getters 和 setters 来实现。
+console.log(User.prototype)
+/*
+{
+    constructor: class User,
+    get name: ƒ name(),
+    set name: ƒ name(value),
+}
+*/
+```
+
+在看个例子，学会语法
+
+```js
+class MyClass {
+  constructor() {
+    // ...
+  }
+  get prop() {
+    return 'getter';
+  }
+  set prop(value) {
+    console.log('setter: '+value);
+  }
+}
+let inst = new MyClass();
+inst.prop = 123;
+// setter: 123
+inst.prop
+// 'getter'
+```
+
+****
+
+```js
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  get fullName() {
+    console.log('get fullName');
+    return `${this.firstName} ${this.lastName}`;
+  }
+  set fullName(value) {
+    console.log('set fullName');
+    [this.firstName, this.lastName] = value.split(' ');
+  }
+}
+const user = new User('hello world');
+// 会打印 get fullName
+user.fullName; // hello world
+
+// 会打印 set fullName
+user.fullName = 'chen john';
+```
+
+
+
+## 练习
+
+```js
+// 1. 使用class语法写出Student例子
+// Student拥有name,age, school属性，和一个sayHi方法
+// 并且每个学生的school属性初始值 = 'csuft'
+
+// 2. 使用class语法写出getter/setter的例子
+```
+
