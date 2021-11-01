@@ -139,6 +139,9 @@ class Point {
 function Point(x, y) {
   this.x = x;
   this.y = y;
+  this.say = function() {
+      
+  }
 }
 Point.prototype.printf = function () {
   console.log(`point: ${this.x}, ${this.y}`);
