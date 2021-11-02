@@ -163,12 +163,61 @@ console.log(surname)
 
 ## 默认导入导出
 
-todo
+从前面的例子可以看出，使用`import`命令的时候，用户需要知道所要加载的变量名或函数名，否则无法加载。但是，用户肯定希望快速上手，未必愿意阅读文档，去了解模块有哪些属性和方法。
+
+为了给用户提供方便，让他们不用阅读文档就能加载模块，就要用到`export default`命令，为模块指定默认输出。
+
+```js
+// sum.js
+// 默认导出一个函数。
+export default function (a, b) {
+  return a + b;
+}
+
+```
+
+ ```js
+ // index.js
+ // 因为sum.js有一个默认导出，所以我们可以这样引入, 这里的sum就代表默认导出的那个函数
+ // import命令可以为该模块默认导出指定任意名字。
+ import sum from './sum.js';
+ 
+ const result = sum(1, 2);
+ console.log(result); // 3
+ // 由于我们可以模块默认导出指定任意名称，这时就不需要知道原模块输出的函数名
+ ```
+
+**更多例子**
+
+```js
+// module.js
+function add(x, y){
+    return x * y;
+}
+function sum(x, y) {
+	return x + y;
+}
+export {
+	add,
+    sum,
+}
+let x = 100;
+export default x;
+```
+
+```js
+// index.js
+import x, {add, sum} from './module.js'
+// 这里x就是默认导出那个变量，我们可以给其指定任意名字。
+// add, sum则是常规导出，一定需要名称相同，不然会报错
+```
 
 ## 练习
 
 ```js
 // 1. 熟悉导入导出语法，如何用导入导出组织代码
+
+// 2. 理解导出和默认导出的区别。
 ```
 
 
