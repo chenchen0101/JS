@@ -110,3 +110,13 @@ document.cookie = 'cookiename=value;HTTPOnly;'
 ```
 
 若cookie设置了HTTPOnly，则我们无法通过document.cookie访问到此类cookie
+
+### path
+
+url 路径前缀，该路径下的页面可以访问该 cookie。
+
+什么意思呢？
+
+可以这么理解。默认情况下，cookie是同域名下的所有路径都能访问到。默认情况下，`www.baidu.com`设置的cookie,在`www.baidu.com/hello/xxx`都能访问到。但设置了path就不太一样了。
+
+如果一个 cookie 带有 `path=/admin` 设置，那么该 cookie 在 `www.baidu.com/admin` 和 `www.baidu.com/admin/something` 下都是可见的，但是在 `www.baidu.com/home` 或 `www.baidu.com/adminpage` 下不可见。
