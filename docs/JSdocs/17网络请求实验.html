@@ -15,9 +15,26 @@
 
   const url = 'https://api.github.com/users';
   // 1. 使用XMLHttpRequest对象请求该Url数据
+  // const xhr = new XMLHttpRequest();
 
+  // xhr.open("GET", url);
+
+  // xhr.send();
+
+  // xhr.onload = function (request) {
+  //   console.log(request.target.response);
+  // }
 
   // 2. 使用fetchAPI请求该URL数据
+  let promise = fetch(url)
+  promise.then(function (response) {
+    if (response.ok === true) {
+      console.log(response.body);
+      return response.text();
+    }
+  }).then((text) => {
+    console.log(text);
+  })
 
 </script>
 

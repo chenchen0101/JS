@@ -197,7 +197,24 @@ console.log(rabbit.earLength); // 10
 
 ```js
 // 1. 使用class继承实现Person,Student;
-
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = 0
+  }
+  say() {
+    console.log('说话');
+  }
+}
+class Student extends Person {
+  constructor(name , sex) {
+    super(name)
+    this.sex = sex;
+  }
+}
+let student = new Student("cc", "女")
+console.log(student.name);
+console.log(student.sex);
 // 2. 学会如何使用super关键词重写父类的方法
 ```
 

@@ -103,8 +103,6 @@ Web 服务器使用 `Set-Cookie` header 来设置 cookie。并且，它可以设
 
 这个选项禁止任何 JavaScript 访问 cookie。我们使用 `document.cookie` 看不到此类 cookie，也无法对此类 cookie 进行操作。
 
-这是一种预防措施，当黑客将自己的 JavaScript 代码注入网页，并等待用户访问该页面时发起攻击，而这个选项可以防止此时的这种攻击。这应该是不可能发生的，黑客应该无法将他们的代码注入我们的网站，但是网站有可能存在 bug，使得黑客能够实现这样的操作。
-
 ```js
 document.cookie = 'cookiename=value;HTTPOnly;'
 ```

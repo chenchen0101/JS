@@ -148,9 +148,6 @@ export {
 // import命令接受一对大括号，里面指定要从其他模块导入的变量名。大括号里面的变量名，必须与被导入模块（profile.js）对外接口的名称相同。
 // firstName, lastName, year都是profile.js使用export出的变量
 import { firstName, lastName, year } from './profile.js';
-function setName(element) {
-  element.textContent = firstName + ' ' + lastName;
-}
 ```
 
 因为必须与对接接口的名称相同。但有时我们想给输入的变量重新取一个名字怎么处理呢？我们可以用as关键词
@@ -174,6 +171,18 @@ export default function (a, b) {
   return a + b;
 }
 
+// sum1.js
+const a = 1;
+export default a;
+
+// sum2.js 
+const obj = {
+    name:"cc",
+    age: 32,
+}
+export default obj;
+
+
 ```
 
  ```js
@@ -181,6 +190,7 @@ export default function (a, b) {
  // 因为sum.js有一个默认导出，所以我们可以这样引入, 这里的sum就代表默认导出的那个函数
  // import命令可以为该模块默认导出指定任意名字。
  import sum from './sum.js';
+ import a from './sum1.js'
  
  const result = sum(1, 2);
  console.log(result); // 3
