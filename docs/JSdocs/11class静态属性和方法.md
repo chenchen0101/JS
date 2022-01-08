@@ -69,5 +69,20 @@ Foo.bar(); // hello
 
 ```js
 // 1. 实现一个类，同时拥有静态属性，静态方法，实例属性，实例方法。体会他们之间的区别。
+class Person {
+  static name = "ccc";
+  static sayHi() {
+    console.log('sayHi');
+  }
+
+  age = 13;
+  sayHello() {
+    console.log('hello');
+  }
+}
+let person = new Person("xxx")
+// console.log(Person.name)
+// Person.sayHi()
+person.sayHello()
 ```
 
