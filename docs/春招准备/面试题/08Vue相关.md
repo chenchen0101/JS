@@ -26,3 +26,17 @@
 [虚拟 DOM 的优缺点？](https://juejin.cn/post/6844903918753808398#heading-25) 
 
 [深入剖析：Vue核心之虚拟DOM](https://juejin.cn/post/6844903895467032589)
+
+### 4. 你听说过SSR吗？
+
+我们如何使用ssr来优化页面？使用ssr和不使用ssr的页面有什么不一样的地方？
+
+参考文章： [浅谈服务端渲染(SSR) - 简书 (jianshu.com)](https://www.jianshu.com/p/10b6074d772c)
+
+[渲染篇一：服务端渲染（SSR） - 简书 (jianshu.com)](https://www.jianshu.com/p/b8cfa496b7ec)
+
+
+
+### 6. vue-route的原理是什么(前端路由实现原理)？
+
+参考文章：[浅谈前端路由 - 简书 (jianshu.com)](https://www.jianshu.com/p/d2aa8fb951e4)
